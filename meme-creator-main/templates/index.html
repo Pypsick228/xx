@@ -39,7 +39,7 @@
               <option value="meme_2.jpg" {% if selected_image == 'meme_2.jpg' %}selected{% endif %}>Две кнопки</option>
               <!--Задание №1. Добавь сюда новые мемы -->
               <option value="meme_3.jpg" {% if selected_image == 'meme_3.jpg' %}selected{% endif %}>Интеллект</option>
-
+              <option value="meme_4.jpg" {% if selected_image == 'meme_4.jpg' %}selected{% endif %}>Да/Нет</option>
             </select>
           </li>
           <li class="form-list_item">
@@ -74,13 +74,13 @@
     </div>
     <div class="meme-block" id="memeBlock">
       
-      <p style="color: {{selected_color}}; top: {{text_top_y}}"></p>
+      <p class="text_top" style="color: {{selected_color}}; top: {{text_top_y}}"></p>
         <!-- Задание №2. Помещаем переменную с текстом -->{{text_top}}
       </p>
 
       <img class="meme" src="{{ url_for('serve_images', path=selected_image) }}" alt="{{ selected_image }}">
 
-      <p style="color: {{selected_color}}; bottom: {{text_bottom_y}}" ></p>
+      <p class="text_bottom" style="color: {{selected_color}}; bottom: {{text_bottom_y}}" ></p>
         <!-- Задание №2. Помещаем переменную с текстом -->
         {{text_bottom}}
 
